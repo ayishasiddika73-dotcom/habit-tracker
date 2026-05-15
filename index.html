@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habit Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <div class="header-card">
+
+        <h1>✨ Habit Tracker</h1>
+
+        <div class="top-controls">
+
+            <select id="monthSelector"></select>
+
+            <input type="text" id="nameInput" placeholder="Your Name">
+
+            <button onclick="toggleTheme()" id="themeBtn">
+                🌙
+            </button>
+
+        </div>
+
+        <p class="quote" id="dailyQuote">
+            Small consistency creates big success.
+        </p>
+
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard-card">
+
+        <div class="stat-box">
+            <h2 id="percentDone">0%</h2>
+            <p>Completion</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="bestStreak">0🔥</h2>
+            <p>Best Streak</p>
+        </div>
+
+        <div class="stat-box">
+            <h2 id="totalDone">0</h2>
+            <p>Tasks Done</p>
+        </div>
+
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Habit</th>
+
+                    <th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>
+                    <th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
+                    <th>11</th><th>12</th><th>13</th><th>14</th><th>15</th>
+                    <th>16</th><th>17</th><th>18</th><th>19</th><th>20</th>
+                    <th>21</th><th>22</th><th>23</th><th>24</th><th>25</th>
+                    <th>26</th><th>27</th><th>28</th><th>29</th><th>30</th>
+                    <th>31</th>
+
+                </tr>
+            </thead>
+
+            <tbody id="habitBody"></tbody>
+
+        </table>
+
+    </div>
+
+    <!-- NOTES -->
+    <div class="notes-card">
+
+        <h3>📝 Notes</h3>
+
+        <textarea id="notesInput"
+            placeholder="Write your thoughts..."></textarea>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

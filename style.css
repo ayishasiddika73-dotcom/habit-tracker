@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #dbeafe, #f5f3ff);
+    min-height: 100vh;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.app {
+    max-width: 100%;
+}
+
+/* CARDS */
+
+.header-card,
+.dashboard-card,
+.notes-card,
+.table-container {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+
+.header-card h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.top-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.top-controls select,
+.top-controls input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#themeBtn {
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
+    color: #444;
+}
+
+/* DASHBOARD */
+
+.dashboard-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.stat-box {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.6);
+}
+
+.stat-box h2 {
+    margin-bottom: 5px;
+}
+
+/* TABLE */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 1000px;
+}
+
+th, td {
+    border: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 5px;
+}
+
+th {
+    background: rgba(255,255,255,0.8);
+}
+
+td input {
+    width: 120px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    border: 2px solid #555;
+    cursor: pointer;
+    margin: auto;
+    transition: 0.2s;
+}
+
+.checkbox.checked {
+    background: #22c55e;
+    transform: scale(1.1);
+}
+
+/* NOTES */
+
+.notes-card textarea {
+    width: 100%;
+    height: 120px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    resize: none;
+}
+
+/* DARK MODE */
+
+.dark {
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: white;
+}
+
+.dark .header-card,
+.dark .dashboard-card,
+.dark .notes-card,
+.dark .table-container,
+.dark .stat-box {
+    background: rgba(30,41,59,0.7);
+    color: white;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+    background: #1e293b;
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+
+    .dashboard-card {
+        flex-direction: column;
+    }
+
+    .top-controls {
+        flex-direction: column;
+    }
+}
